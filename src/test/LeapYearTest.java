@@ -1,12 +1,14 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class LeapYearTest {
-    @Test
-    void leapYear() {
-        assertThat(isLeapYear(2400)).isTrue();
-        assertThat(isLeapYear(2020)).isTrue();
+    @ParameterizedTest
+    @ValueSource(ints = {2020, 2400})
+    void leapYear(int year) {
+        assertThat(isLeapYear(year)).isTrue();
     }
 
     @Test
