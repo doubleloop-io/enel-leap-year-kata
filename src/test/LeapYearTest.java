@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -11,9 +10,10 @@ public class LeapYearTest {
         assertThat(isLeapYear(year)).isTrue();
     }
 
-    @Test
-    void notLeapYear() {
-        assertThat(isLeapYear(2100)).isFalse();
+    @ParameterizedTest
+    @ValueSource(ints = {2100, 1977})
+    void notLeapYear(int year) {
+        assertThat(isLeapYear(year)).isFalse();
     }
 
     private boolean isLeapYear(int year) {
