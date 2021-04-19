@@ -7,4 +7,5 @@
 -[ ] `Int.MAX_VALUE` -> ???
 -[ ] 1977 -> false
 -[X] 2020 -> true
+-[ ] si vede un solo fallimento quando ho più assert
 -[ ] ....

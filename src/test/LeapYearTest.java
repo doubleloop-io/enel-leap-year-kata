@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class LeapYearTest {
     @Test
     void leapYear() {
+        assertThat(isLeapYear(2400)).isTrue();
         assertThat(isLeapYear(2020)).isTrue();
     }
 
