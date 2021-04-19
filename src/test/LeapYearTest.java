@@ -9,7 +9,7 @@ public class LeapYearTest {
     }
 
     private boolean isLeapYear(int year) {
-        if (year == 2020) return true;
+        if (year % 4 == 0) return true;
         return false;
     }
 }
