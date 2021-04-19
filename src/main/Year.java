@@ -5,7 +5,7 @@ public class Year {
         this.year = year;
     }
 
-    public boolean isDivisibleBy(int year, int divisor) {
+    public boolean isDivisibleBy(int divisor) {
         return year % divisor == 0;
     }
 }
