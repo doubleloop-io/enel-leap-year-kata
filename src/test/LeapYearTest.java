@@ -18,9 +18,9 @@ public class LeapYearTest {
 
     private static boolean isLeapYear(int year) {
         Year year1 = new Year(year);
-        if (isDivisibleBy(year, 400)) return true;
-        if (isDivisibleBy(year, 100)) return false;
-        if (isDivisibleBy(year, 4)) return true;
+        if (isDivisibleBy(year1.year, 400)) return true;
+        if (isDivisibleBy(year1.year, 100)) return false;
+        if (isDivisibleBy(year1.year, 4)) return true;
         return false;
     }
 
