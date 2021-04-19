@@ -16,11 +16,9 @@ public class LeapYearTest {
         assertThat(isLeapYear(year)).isFalse();
     }
 
-    private static boolean isLeapYear(int year) {
+    private boolean isLeapYear(int year) {
         Year year1 = new Year(year);
-        if (year1.isDivisibleBy(400)) return true;
-        if (year1.isDivisibleBy(100)) return false;
-        if (year1.isDivisibleBy(4)) return true;
-        return false;
+        return year1.isLeap();
     }
+
 }
